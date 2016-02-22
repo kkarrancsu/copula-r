@@ -33,7 +33,7 @@ License: GPL (>= 3) | file LICENCE
 ByteCompile: yes
 VignetteBuilder: knitr
 Collate: AllClass.R Classes.R Copula.R Auxiliaries.R aux-acopula.R
-        special-func.R cop_objects.R nacopula.R derCdfPdf.R amhCopula.R
+        special-func.R cop_objects.R nacopula.R derCdfPdf.R device.R amhCopula.R
         amhExpr.R An.R archmCopula.R asymCopula.R asymExplicitCopula.R
         claytonCopula.R claytonExpr.R ellipCopula.R empcop.R empPsi.R
         acR.R estimation.R evCopula.R evTests.R exchTests.R fgmCopula.R
