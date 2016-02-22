@@ -22,13 +22,13 @@ rm(list = ls())
 cat("\014")
 
 ## hardcoded, but for now not sure how to handle this in R :/
-setwd("/home/kiran/phd_code/copula/r_playground/")
+setwd("/home/kiran/phd_code/copula-r")
 
 ## unload any existing loaded copula packages
 #detach("package:copula", unload=TRUE)
-library(copula, lib.loc="/home/kiran/R_sources/install")  ## load our personal copula library, where we
-                                                          ## made small print-outs to understand better what was
-                                                          ## going on with some of the code :)
+library(copula, lib.loc="./install")  ## load our personal copula library, where we
+                                      ## made small print-outs to understand better what was
+                                      ## going on with some of the code
 library(utils)
 
 
