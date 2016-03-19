@@ -14,23 +14,12 @@
 #*
 #* You should have received a copy of the GNU General Public License
 #* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#**************************************************************************
 
 ## A script which produces test inputs/outputs for the Matlab implementation
 ## of Frank, Gumbel, and Clayton multivariate copula density functions
 
-rm(list = ls())
-cat("\014")
-
-## hardcoded, but for now not sure how to handle this in R :/
-setwd("/home/kiran/phd_code/copula-r")
-
-## unload any existing loaded copula packages
-#detach("package:copula", unload=TRUE)
-library(copula, lib.loc="./install")  ## load our personal copula library, where we
-                                      ## made small print-outs to understand better what was
-                                      ## going on with some of the code
-library(utils)
-
+source("setupDir.R")
 
 ## Generate data
 alpha <- 4;
