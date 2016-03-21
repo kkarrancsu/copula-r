@@ -47,23 +47,24 @@ double rF01Frank(double V0, double theta0, double theta1, double p0, double p1,
 {
     double alpha = theta0 / theta1, iAlpha = (theta1-theta0)/theta1, U, V;
     if(V0*theta0*pow(p0,V0-1.) > rej) { /**< sample V01 via standard rejection from F01 for Joe */
-	do {
-	    U = unif_rand();
-	    V = rF01Joe(V0, alpha,gamma_1_a, approx);
-	} while(U > pow(p1, V));
-    } else { /**< sample V01 as the V0-fold sum where the summands are sampled
-		via rejection with a logarithmic envelope */
-	double Ip = exp(-theta1);
-	V = 0.;
-	double X;
-	/* if(theta0 <= theta1){ */
-	for(int j=0; j < (int) V0; j++){ /**< sample V01 as a sum */
-	    do {
-		U = unif_rand();
-		X = rLog(p1,Ip);
-	    } while (U*(X-alpha) > 1./beta(X, iAlpha)); /**< X is now one summand of the sum of V01 */
-	    V += X;
-	}
+    	do {
+    	    U = unif_rand();
+    	    V = rF01Joe(V0, alpha,gamma_1_a, approx);
+    	} while(U > pow(p1, V));
+    } 
+    else { /**< sample V01 as the V0-fold sum where the summands are sampled
+		        via rejection with a logarithmic envelope */
+    	double Ip = exp(-theta1);
+    	V = 0.;
+    	double X;
+    	/* if(theta0 <= theta1){ */
+    	for(int j=0; j < (int) V0; j++){ /**< sample V01 as a sum */
+  	    do {
+    		  U = unif_rand();
+    		  X = rLog(p1,Ip);
+  	    } while (U*(X-alpha) > 1./beta(X, iAlpha)); /**< X is now one summand of the sum of V01 */
+  	    V += X;
+	    }
 	/* }else{ */
 	/*     for(int j=0; j < (int) V0; j++){ /\**< sample V01 as a sum *\/ */
 	/* 	do { */
