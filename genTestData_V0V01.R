@@ -27,11 +27,21 @@ theta0 <- 0.5
 theta1 <- 1.7
 V0_val <- cop@V0(n, theta0)
 V01_val <- cop@V01(V0_val, theta0, theta1)
-write.table(V0_val, file = "testfiles/clayton_v0.csv", sep = ",",
+write.table(V0_val, file = "testfiles/clayton_v0_1.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
-write.table(V01_val, file = "testfiles/clayton_v01.csv", sep = ",", 
+write.table(V01_val, file = "testfiles/clayton_v01_1.csv", sep = ",", 
             row.names = FALSE, col.names = FALSE)
 
+cop <- getAcop("Clayton")
+n <- 1000
+theta0 <- 1.1
+theta1 <- 2.3
+V0_val <- cop@V0(n, theta0)
+V01_val <- cop@V01(V0_val, theta0, theta1)
+write.table(V0_val, file = "testfiles/clayton_v0_2.csv", sep = ",",
+            row.names = FALSE, col.names = FALSE)
+write.table(V01_val, file = "testfiles/clayton_v01_2.csv", sep = ",", 
+            row.names = FALSE, col.names = FALSE)
 
 cop <- getAcop("Gumbel")
 n <- 1000
@@ -50,7 +60,18 @@ theta0 <- 0.5
 theta1 <- 5.0
 V0_val <- cop@V0(n, theta0)
 V01_val <- cop@V01(V0_val, theta0, theta1)
-write.table(V0_val, file = "testfiles/frank_v0.csv", sep = ",",
+write.table(V0_val, file = "testfiles/frank_v0_1.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
-write.table(V01_val, file = "testfiles/frank_v01.csv", sep = ",", 
+write.table(V01_val, file = "testfiles/frank_v01_1.csv", sep = ",", 
+            row.names = FALSE, col.names = FALSE)
+
+cop <- getAcop("Frank")
+n <- 1000
+theta0 <- 1.5
+theta1 <- 3.3
+V0_val <- cop@V0(n, theta0)
+V01_val <- cop@V01(V0_val, theta0, theta1)
+write.table(V0_val, file = "testfiles/frank_v0_2.csv", sep = ",",
+            row.names = FALSE, col.names = FALSE)
+write.table(V01_val, file = "testfiles/frank_v01_2.csv", sep = ",", 
             row.names = FALSE, col.names = FALSE)

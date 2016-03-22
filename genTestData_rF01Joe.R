@@ -20,7 +20,7 @@
 
 source("setupDir.R")
 
-V0 <- runif(10000)*100+300
+V0 <- runif(1000)*100
 alpha <- 0.3
 approx <- 100000
 St = rF01Joe(V0, alpha, approx)
@@ -32,7 +32,7 @@ write.table(St, file = "testfiles/rF01Joe_output1.csv", sep = ",",
 
 V0 <- runif(10000)*100+300
 alpha <- 0.8
-approx <- 100000
+approx <- 10
 St = rF01Joe(V0, alpha, approx)
 
 write.table(V0, file = "testfiles/rF01Joe_input2.csv", sep = ",",

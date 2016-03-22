@@ -20,14 +20,12 @@
 
 source("setupDir.R")
 
-p <- 0.2;
+p <- 0.15;
 y <- rlog(1000, p)
-
 write.table(y, file = "testfiles/rlog_output1.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
 
-p <- 0.6;
+p <- 0.9;
 y <- rlog(1000, p)
-
 write.table(y, file = "testfiles/rlog_output2.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
