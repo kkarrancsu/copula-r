@@ -20,15 +20,28 @@
 
 source("setupDir.R")
 
-n <- 1000;
-alphaVal <- 0.3
-y <- rSibuya(n, alphaVal)
+## setup the dynamic library, I'm not sure why I have to do all this wrangling
+## to call logseries_R but this is what I was able to get working :/
 
-write.table(y, file = "testfiles/rSibuya_output1.csv", sep = ",",
+dyn.load("testfiles/logseries.so")
+n <- 1000
+alpha <- 0.75
+val <- integer(n)
+alpha <- rep(alpha, len = n)
+y <- .C("rlogseries_R", as.integer(n), as.double(alpha), val = as.integer(val))$val
+write.table(y, file = "testfiles/rlogseries_output1.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
 
-n <- 1000;
-alphaVal <- 0.7
-y <- rSibuya(n, alphaVal)
-write.table(y, file = "testfiles/rSibuya_output2.csv", sep = ",",
+alpha <- 0.25
+val <- integer(n)
+alpha <- rep(alpha, len = n)
+y <- .C("rlogseries_R", as.integer(n), as.double(alpha), val = as.integer(val))$val
+write.table(y, file = "testfiles/rlogseries_output2.csv", sep = ",",
+            row.names = FALSE, col.names = FALSE)
+
+alpha <- 0.99
+val <- integer(n)
+alpha <- rep(alpha, len = n)
+y <- .C("rlogseries_R", as.integer(n), as.double(alpha), val = as.integer(val))$val
+write.table(y, file = "testfiles/rlogseries_output3.csv", sep = ",",
             row.names = FALSE, col.names = FALSE)
