@@ -19,7 +19,7 @@
 ## A script which produces test inputs/outputs for the Matlab implementation
 ## of Frank, Gumbel, and Clayton multivariate copula density functions
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 ## Generate data
 alpha <- 4;

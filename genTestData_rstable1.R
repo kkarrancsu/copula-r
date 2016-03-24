@@ -18,7 +18,7 @@
 
 ## A script which produces test data for rstable1, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 n <- 1000
 alpha <- 0.8

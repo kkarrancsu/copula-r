@@ -18,7 +18,7 @@
 
 ## A script which produces test data for retstable, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 V0 <- runif(10000)
 alpha <- 0.5

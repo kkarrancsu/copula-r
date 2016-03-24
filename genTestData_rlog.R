@@ -18,7 +18,7 @@
 
 ## A script which produces test data for rLog, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 p <- 0.15;
 y <- rlog(1000, p)

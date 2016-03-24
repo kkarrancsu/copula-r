@@ -18,7 +18,7 @@
 
 ## A script which produces test data for retstable, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 ## setup the dynamic library, I'm not sure why I have to do all this wrangling
 ## to call logseries_R but this is what I was able to get working :/

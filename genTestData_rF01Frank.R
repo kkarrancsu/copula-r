@@ -18,7 +18,7 @@
 
 ## A script which produces test data for rF01Frank, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 # test the IF branch
 V0 <- runif(10000)*100

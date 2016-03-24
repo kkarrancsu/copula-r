@@ -18,7 +18,7 @@
 
 ## A script which produces test data for rF01Joe, to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 # tests the else branch
 V0 <- runif(1000)*100

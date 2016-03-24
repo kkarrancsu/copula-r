@@ -19,7 +19,7 @@
 ## A script which produces test data for V0 and V01 for Archimedean Copulas,
 ## to compare w/ Matlab
 
-source("setupDir.R")
+source("loadCopulaPackage.R")
 
 cop <- getAcop("Clayton")
 n <- 1000
