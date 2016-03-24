@@ -21,11 +21,11 @@ rm(list = ls())
 cat("\014")
 
 ## Assumes we have $HOME/stochasticresearch/copula-r :(
-file.path(path.expand("~"), "stochasticresearch", "copula-r")
+setwd(file.path(path.expand("~"), "stochasticresearch", "copula-r"))
 
 ## unload any existing loaded copula packages
 #detach("package:copula", unload=TRUE)
-library(copula, lib.loc="./install")  ## load our personal copula library, where we
+library(copula, lib.loc="../install")  ## load our personal copula library, where we
 ## made small print-outs to understand better what was
 ## going on with some of the code
 library(utils)
