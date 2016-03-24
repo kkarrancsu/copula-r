@@ -20,10 +20,11 @@
 
 source("setupDir.R")
 
+# test the IF branch
 V0 <- runif(10000)*100
 theta0 <- 0.4
 theta1 <- 3
-rej <- 10
+rej <- 0.1
 approx <- 100
 St = rF01Frank(V0, theta0, theta1, rej, approx)
 
@@ -32,6 +33,7 @@ write.table(V0, file = "testfiles/rF01Frank_input1.csv", sep = ",",
 write.table(St, file = "testfiles/rF01Frank_output1.csv", sep = ",", 
             row.names = FALSE, col.names = FALSE)
 
+# test the else branch
 V0 <- runif(10000)*300
 theta0 <- 0.8
 theta1 <- 8

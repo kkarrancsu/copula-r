@@ -20,6 +20,7 @@
 
 source("setupDir.R")
 
+# tests the else branch
 V0 <- runif(1000)*100
 alpha <- 0.3
 approx <- 100000
@@ -30,6 +31,7 @@ write.table(V0, file = "testfiles/rF01Joe_input1.csv", sep = ",",
 write.table(St, file = "testfiles/rF01Joe_output1.csv", sep = ",", 
             row.names = FALSE, col.names = FALSE)
 
+# test the IF branch
 V0 <- runif(10000)*100+300
 alpha <- 0.8
 approx <- 10
