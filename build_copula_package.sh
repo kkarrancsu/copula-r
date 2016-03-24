@@ -3,6 +3,9 @@ reset
 
 pushd .
 
+rm -rf install
+mkdir install
+
 # Remove Old versions
 rm copula_0.999-14.tar.gz
 R CMD REMOVE --library=install copula
@@ -17,6 +20,6 @@ R CMD INSTALL --library=install copula_0.999-14.tar.gz
 cd copula/src
 R CMD SHLIB logseries.c
 rm logseries.o
-mv logseries.so ../../testfiles/
+mv logseries.so ../../install/
 
 popd

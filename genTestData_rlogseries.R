@@ -23,7 +23,7 @@ source("setupDir.R")
 ## setup the dynamic library, I'm not sure why I have to do all this wrangling
 ## to call logseries_R but this is what I was able to get working :/
 
-dyn.load("testfiles/logseries.so")
+dyn.load("install/logseries.so")
 n <- 1000
 alpha <- 0.75
 val <- integer(n)
