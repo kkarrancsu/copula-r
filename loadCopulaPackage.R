@@ -24,8 +24,11 @@ cat("\014")
 setwd(file.path(path.expand("~"), "stochasticresearch", "copula-r"))
 
 ## unload any existing loaded copula packages
-#detach("package:copula", unload=TRUE)
+if(any( grepl("copula", (.packages())) )) {
+  detach("package:copula", unload=TRUE)
+}
 library(copula, lib.loc="../install")  ## load our personal copula library, where we
 ## made small print-outs to understand better what was
 ## going on with some of the code
+
 library(utils)
